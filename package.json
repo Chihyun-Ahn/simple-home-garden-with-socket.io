@@ -1,0 +1,22 @@
+{
+  "name": "nodeHomepage",
+  "version": "1.0.0",
+  "description": "hompage",
+  "main": "app.js",
+  "dependencies": {
+    "express": "4.16.4",
+    "http": "0.0.0",
+    "math": "0.0.3",
+    "mcp-spi-adc": "^2.0.4",
+    "mysql": "^2.16.0",
+    "onoff": "^3.2.2",
+    "socket.io": "^2.2.0",
+    "ws": "^6.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

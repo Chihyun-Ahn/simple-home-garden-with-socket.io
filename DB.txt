@@ -1,0 +1,48 @@
+멤버관리 테이블 생성
+
+CREATE TABLE MEMBERS(
+    num         INT PRIMARY KEY AUTO_INCREMENT,
+    ID          VARCHAR(15) NOT NULL,
+    PW          VARCHAR(15) NOT NULL,
+    NAME        VARCHAR(20) NOT NULL,
+    PHONENUM    VARCHAR(20) NOT NULL,
+    SPARE1      VARCHAR(20), 
+    SPARE2      VARCHAR(20)
+);
+
+회원정보 삽입
+
+INSERT INTO MEMBERS(ID, PW, NAME, PHONENUM) 
+VALUES(
+    'aaaa','1234','김덕팔','010-0000-0000'
+);
+
+INSERT INTO MEMBERS(ID, PW, NAME, PHONENUM) 
+VALUES(
+    'bbbb','1234','조희팔','010-0001-0001'
+);
+
+INSERT INTO MEMBERS(ID, PW, NAME, PHONENUM) 
+VALUES(
+    'cccc','1234','조순자','010-0002-0002'
+);
+
+db사용자 추가
+CREATE USER username@localhost IDENTIFIED BY 'userpassword';
+db사용자 권한 부여
+GRANT SELECT, INSERT, UPDATE, DELETE ON anchiDB.* TO aaa@localhost;
+
+회원정보 조회
+
+SELECT ID, NAME FROM MEMBERS WHERE ID=?, PW=?;
+
+각 회원별 테이블 생성(센서 정보, 콘트롤 정보 저장용)
+CREATE TABLE ?(
+    num         INT PRIMARY KEY AUTO_INCREMENT,
+    SENSOR1     VARCHAR(20),
+    SENSOR2     VARCHAR(20),
+    SENSOR3     VARCHAR(20),
+    RELAY1      VARCHAR(20),
+    RELAY2      VARCHAR(20), 
+    //시간찍는거..
+);
